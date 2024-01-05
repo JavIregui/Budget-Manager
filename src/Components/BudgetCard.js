@@ -1,23 +1,17 @@
 import { currencyFormatter  } from "../utils";
 import ProgressBar from "./ProgressBar";
 
-export default function BudgetCard({ name, amount, max }) {
-    // Bar color
-    let bgColor
-    if(name == 'Uncategorized' || name == 'Total') {
-        bgColor  = 'bg-slate-100'
-    }
-    else  {
-        if (amount == max) {
-            bgColor = 'bg-red-100'
-        } else {
-            bgColor = 'bg-white'
-        }
+export default function BudgetCard({ name, amount, max, gray }) {
+    const classNames = []
+    if(amount >= max) {
+        classNames.push("bg-red-100")
+    } else if (gray) {
+        classNames.push("bg-slate-100")
     }
 
     return (
         // Card
-        <div className={`max-w-md mx-auto p-4 mb-2 border rounded shadow-md ${bgColor}`}>
+        <div className={"max-w-md mx-auto p-4 mb-2 border rounded shadow-md " + classNames.join(" ")}>
             {/* Card Title */}
             <div className="flex justify-between align-baseline mb-2">
                 <div className="font-bold me-2">{name}</div>

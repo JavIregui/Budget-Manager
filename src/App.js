@@ -2,8 +2,8 @@
 //  Theme
 //  Currency
 
-import Header from './Components/Header'
-import BudgetCard from './Components/BudgetCard'
+import Header from './components/Header'
+import BudgetCard from './components/BudgetCard'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header></Header>
       {/* Cards */}
       <BudgetCard name= "Entertainment" amount={250} max={1000}></BudgetCard>
-      <BudgetCard name= "Uncategorized" amount={600} max={1200}></BudgetCard>
+      <BudgetCard name= "Uncategorized" gray amount={600} max={1200}></BudgetCard>
     </div>
   )
 }
