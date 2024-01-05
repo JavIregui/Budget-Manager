@@ -1,5 +1,4 @@
 export default function ProgressBar({ percent }) {
-
     // Bar color
     let darkColor
     if (percent >= 75) {
@@ -9,7 +8,6 @@ export default function ProgressBar({ percent }) {
     } else {
         darkColor = 'bg-slate-400'
     }
-
     // Bar size
     let barSize
     if(percent >= 100) {
@@ -21,7 +19,7 @@ export default function ProgressBar({ percent }) {
     }
 
     return (
-        <div className=" bg-slate-100 h-4 w-full rounded">
+        <div className="bg-slate-200 h-4 w-full rounded mb-4">
             <div className={`${darkColor} h-4 rounded`} style={{ width: `${barSize}%` }}></div>
         </div>
     );

@@ -12,8 +12,8 @@ function App() {
       {/* Header */}
       <Header></Header>
       {/* Cards */}
-      <BudgetCard name= "Entertainment" amount={750} max={1000}></BudgetCard>
-      <BudgetCard name= "Entertainment" amount={600} max={1200}></BudgetCard>
+      <BudgetCard name= "Entertainment" amount={250} max={1000}></BudgetCard>
+      <BudgetCard name= "Uncategorized" amount={600} max={1200}></BudgetCard>
     </div>
   )
 }
